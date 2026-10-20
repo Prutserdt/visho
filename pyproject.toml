@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "visho"
+version = "0.1.0"
+description = "Interactive map of geotagged JPEG photos with thumbnails"
+requires-python = ">=3.9"
+dependencies = ["Pillow>=10.0"]
+
+[project.scripts]
+visho = "visho.cli:main"
+
+[tool.setuptools]
+packages = ["visho"]
+
+[tool.setuptools.package-data]
+visho = ["web/*"]
